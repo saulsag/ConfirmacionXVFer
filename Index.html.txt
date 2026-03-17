@@ -1,0 +1,60 @@
+
+!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Invitación | Mi Evento</title>
+  <meta name="description" content="Invitación personalizada a Mi Evento">
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Fuente opcional (puedes cambiarla o quitarla) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap">
+  <!-- Librería para generar el QR en el navegador -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <header class="hero">
+        <!-- Cambia esta imagen por una tuya (colócala en /img/hero.jpg o usa una URL) -->
+        <div class="hero-overlay"></div>
+        <h1 class="event-title" id="eventTitle">Mi Evento</h1>
+        <p class="event-subtitle" id="eventSubtitle">Sábado 10 de mayo · 7:00 PM · Salón Central</p>
+      </header>
+
+      <section class="content">
+        <p class="hello">¡Hola, <span id="guestName">Invitado/a</span>!</p>
+        <p class="message">
+          Nos encantará contar con tu presencia. Esta invitación incluye
+          <strong><span id="passesCount">1</span> pase(s)</strong>.
+        </p>
+
+        <div class="badge">
+          <div class="badge-row"><span class="label">Código:</span> <span id="guestCode" class="value">—</span></div>
+          <div class="badge-row"><span class="label">Titular:</span> <span id="guestNameBadge" class="value">Invitado/a</span></div>
+          <div class="badge-row"><span class="label">Pases:</span> <span id="passesBadge" class="value">1</span></div>
+        </div>
+
+        <div class="qr-block">
+          <div id="qrcode"></div>
+          <p class="qr-note">Presenta este QR en el acceso.</p>
+        </div>
+
+        <!-- Botones (opcional: modifica enlaces) -->
+        <div class="cta">
+          <!-- Enlace de confirmación por WhatsApp con mensaje prellenado -->
+          <a id="whLink" class="btn primary" target="_blank" rel="noopener">Confirmar por WhatsApp</a>
+          <!-- Enlace a ubicación (cámbialo a tu Google Maps) -->
+          <a href="https://maps.app.goo.gl/" class="btn ghost" target="_blank" rel="noopener">Cómo llegar</a>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <small>Si esta invitación no es para ti, ignora este mensaje.</small>
+      </footer>
+    </section>
+  </main>
+</body>
+</html>
